@@ -1,0 +1,14 @@
+<!-- *ngFor directive is being used to display all returned movies, where each movie is displayed in its own card.  -->
+<mat-card *ngFor="let movie of movies; let i=index">
+    <mat-dialog-content>
+        <mat-card-title>
+            {{movie.Title}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{movie.Description}}
+        </mat-card-subtitle>
+        <mat-card-content>
+            <img src="{{movie.ImagePath}}" alt="Movie Poster" style="width: 20%;">
+        </mat-card-content>
+    </mat-dialog-content>
+</mat-card>
