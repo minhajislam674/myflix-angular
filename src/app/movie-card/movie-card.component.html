@@ -1,14 +1,29 @@
-<!-- *ngFor directive is being used to display all returned movies, where each movie is displayed in its own card.  -->
-<mat-card *ngFor="let movie of movies; let i=index">
-    <mat-dialog-content>
-        <mat-card-title>
-            {{movie.Title}}
-        </mat-card-title>
-        <mat-card-subtitle>
-            {{movie.Description}}
-        </mat-card-subtitle>
-        <mat-card-content>
-            <img src="{{movie.ImagePath}}" alt="Movie Poster" style="width: 20%;">
-        </mat-card-content>
-    </mat-dialog-content>
-</mat-card>
+<div class="cards-container">
+    <mat-card *ngFor="let movie of movies;" class="card-element">
+        <img class="mat-card-image" src={{movie.ImagePath}} alt= {{movie.Title}} style="max-width: 400px" />
+        <mat-card-header>
+            <mat-card-title>{{movie.Title}} ({{(movie.ReleaseYear)}})</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+            <button
+                mat-button
+                color="primary"
+            >
+                Genre
+            </button>
+            <button
+                mat-button
+                color="primary"
+            >
+                Director
+            </button>
+            <button
+                mat-button
+                color="primary"
+            >
+                Synopsis
+            </button>
+            <mat-icon>favorite_border</mat-icon>
+        </mat-card-actions>
+    </mat-card>
+</div>
