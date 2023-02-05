@@ -1,0 +1,23 @@
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Your Profile</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p> Username: {{user.Username}} </p>
+        <p> Email: {{user.Email}} </p>
+    </mat-card-content>
+
+      <mat-card-actions class="user-profile-actions">
+        <button mat-raised-button (click)="openUserUpdateDialog()" color="basic">
+          <mat-icon>edit</mat-icon>
+          Update profile
+        </button>
+        <button mat-raised-button (click)="deleteUser()" color="warn">
+          <mat-icon>edit</mat-icon>
+          Delete profile
+        </button>
+      </mat-card-actions>
+</mat-card>
+
+

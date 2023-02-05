@@ -1,0 +1,50 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title style="margin-bottom: 15px;">Update Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input 
+                    matInput 
+                    [(ngModel)] ='updatedUser.Username'
+                    type="text"
+                    name="Username" 
+                    required
+                >
+
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input 
+                    matInput 
+                    [(ngModel)] = 'updatedUser.Password'
+                    type="password"
+                    name="Password"
+                    required
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input 
+                    matInput 
+                    [(ngModel)] = 'updatedUser.Email'
+                    type="email"
+                    name="Email"
+                    required
+                >
+            </mat-form-field>
+            <mat-card-actions>
+                <button
+                    mat-raised-button
+                    color="primary"
+                    type="submit"
+                    (click) = 'updateUserData()'
+                >
+                Update
+                </button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>
