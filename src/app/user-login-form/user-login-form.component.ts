@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 // We'll use this import to close the dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
@@ -20,7 +22,10 @@ export class UserLoginFormComponent {
   constructor(
     public fetchApiData: FetchDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
-    public snackBar: MatSnackBar) { }
+    public snackBar: MatSnackBar,
+    private router: Router
+    ) { }
+    
 
   ngOnInit(): void {}
 
@@ -32,11 +37,14 @@ export class UserLoginFormComponent {
         console.log(response);
         localStorage.setItem('user', response.user.Username);
         localStorage.setItem('token', response.token);
+        this.router.navigate(['movies']);
         this.snackBar.open('Logged in successfully!', 'OK', {
           duration: 2000 
         });
      }, (response) => {
         console.log(response);
+       
+
         this.snackBar.open(response, 'OK', {
           duration: 2000 
         });
