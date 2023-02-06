@@ -1,1 +1,26 @@
-<p>navbar works!</p>
+<div class="navbar">
+    <a 
+        class="navbar-logo"
+        (click) = 'routeToMovieView()'
+    >
+        myFlix
+    </a>
+
+    <div class="navbar-menu">
+        <a
+            (click) = 'routeToMovieView()' 
+        >
+            Movies
+        </a>
+        <a
+            (click) = 'routeToProfileView()' 
+        >
+            Profile
+        </a>
+        <a
+            (click) = 'logout()' 
+        >
+            Logout
+        </a>
+    </div>
+  </div>

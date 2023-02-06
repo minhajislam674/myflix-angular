@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss']
 })
-export class MovieCardComponent {
+export class MovieCardComponent implements OnInit{
 
   //Variable named "movies" is declared as an array. This is where the movies returned from the API call will be kept.
   movies: any[] = [];

@@ -1,23 +1,29 @@
 
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>Your Profile</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <p> Username: {{user.Username}} </p>
-        <p> Email: {{user.Email}} </p>
-    </mat-card-content>
+<app-navbar></app-navbar>
 
-      <mat-card-actions class="user-profile-actions">
-        <button mat-raised-button (click)="openUserUpdateDialog()" color="basic">
-          <mat-icon>edit</mat-icon>
-          Update profile
-        </button>
-        <button mat-raised-button (click)="deleteUser()" color="warn">
-          <mat-icon>edit</mat-icon>
-          Delete profile
-        </button>
-      </mat-card-actions>
-</mat-card>
+<div class="card-container">
+    <mat-card class="card-element" >
+      <mat-card-header>
+          <mat-card-title> <h1> Your Profile </h1></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <p> <b>Username:</b> {{user.Username}} </p>
+          <p> <b>Email:</b> {{user.Email}} </p>
+      </mat-card-content>
+
+        <mat-card-actions class="user-profile-actions">
+          <button mat-raised-button (click)="openUserUpdateDialog()" color="basic">
+            <mat-icon>edit</mat-icon>
+            Update profile
+          </button>
+          <button mat-raised-button (click)="deleteUser()" color="warn">
+            <mat-icon>delete</mat-icon>
+            Delete profile
+          </button>
+        </mat-card-actions>
+   </mat-card>
+
+</div>
+
 
 

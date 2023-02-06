@@ -4,6 +4,8 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   justify-content: center;
+  background-color: rgb(250, 250, 234);
+  margin-top: 20px;
 }
 
 .card-element {
@@ -13,6 +15,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
+  background-color: #fdfdfb;
 }
 
 .mat-card-image {
