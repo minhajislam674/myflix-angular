@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>Register</mat-card-title>
+        <mat-card-title style="margin-bottom: 15px;">Update Information</mat-card-title>
     </mat-card-header>
     <mat-card-content>
         <form>
@@ -8,7 +8,7 @@
                 <mat-label>Username</mat-label>
                 <input 
                     matInput 
-                    [(ngModel)] = 'userData.Username'
+                    [(ngModel)] ='updatedUser.Username'
                     type="text"
                     name="Username" 
                     required
@@ -19,7 +19,7 @@
                 <mat-label>Password</mat-label>
                 <input 
                     matInput 
-                    [(ngModel)] = 'userData.Password'
+                    [(ngModel)] = 'updatedUser.Password'
                     type="password"
                     name="Password"
                     required
@@ -29,7 +29,7 @@
                 <mat-label>Email</mat-label>
                 <input 
                     matInput 
-                    [(ngModel)] = 'userData.Email'
+                    [(ngModel)] = 'updatedUser.Email'
                     type="email"
                     name="Email"
                     required
@@ -38,11 +38,11 @@
             <mat-card-actions>
                 <button
                     mat-raised-button
-                    style="background-color: #737e61; color:rgb(250, 250, 234);"
+                    color="primary"
                     type="submit"
-                    (click) = 'registerUser()'
+                    (click) = 'updateUserData()'
                 >
-                Sign Up
+                Update
                 </button>
             </mat-card-actions>
         </form>
