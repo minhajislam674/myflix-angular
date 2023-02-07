@@ -1,27 +1,39 @@
-# MyFlixAngularClient
+# OscarFlicks - Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+> Welcome to OscarFlicks, a minimal client-side single page application (SPA) that allows users to browse Academy Award winning films. The app is built on top of existing server-side code, including a REST API and database.
 
-## Development server
+Live Demo: https://minhajislam674.github.io/myflix-angular/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Repository for server-side code: https://github.com/minhajislam674/movie-api
 
-## Code scaffolding
+<img
+  src="src/assets/Screenshot_movie-view.jpeg"
+  alt="OscarFlicks"
+  title="OscarFlicks"
+  style="display: inline-block; width: 650px">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+With OscarFlicks, you can easily search and filter through a wide range of Academy Award winning films, view detailed information about each film, and even sign up to be able to add films to your watchlist.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Built with
 
-## Running unit tests
+- Angular
+- TypeScript
+- Angular-Material
+- TypeDoc
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
 
-## Running end-to-end tests
+1. Clone the project
+2. Install Angular CLI
+3. Run `ng serve` for a dev server.
+4. Navigate to `http://localhost:4200/`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contributing
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
