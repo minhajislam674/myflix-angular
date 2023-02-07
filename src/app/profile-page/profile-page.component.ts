@@ -29,6 +29,11 @@ export class ProfilePageComponent implements OnInit  {
     this.getUserData();
   }
 
+/**
+ * Fetch user data via API
+ * @function getUserData
+ * @returns Object with user information
+ */
 
   getUserData(): void {
     this.fetchUserData.getUserInfo().subscribe((resp: any) => {
@@ -38,6 +43,11 @@ export class ProfilePageComponent implements OnInit  {
     });
   }
 
+/**
+ * Delete user data via API
+ * @function deleteUser
+ */
+
   deleteUser(): void {
     if (confirm('Are you sure you want to delete your account? This action cannnot be undone.')) {
       this.router.navigate(['welcome']).then(() => {
@@ -46,15 +56,17 @@ export class ProfilePageComponent implements OnInit  {
         this.snackBar.open('Your account has been deleted.', 'OK', {
           duration: 3000
         });
-
       });
-
     }
     this.fetchUserData.deleteUser().subscribe(res=>{
       console.log('deleteAccountRes:', res);
     })
   }
 
+/**
+ * Open a dialog to update user information when clicked
+ * @function openUserUpdateDialog
+ */
 
   openUserUpdateDialog(): void {
     this.dialog.open(UserUpdateFormComponent, {

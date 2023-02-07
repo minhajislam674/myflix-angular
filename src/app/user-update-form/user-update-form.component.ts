@@ -19,22 +19,26 @@ export class UserUpdateFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /**
+   * Update user info, such as username, password, or email
+   * @function updateUserData
+   */
 
-    updateUserData(): void {
-      this.fetchUserData.updateUserInfo(this.updatedUser).subscribe((res: any) => {
-        this.dialogRef.close(); //close the modal on success
-        this.snackBar.open('User updated successfully!', 'OK', {
-          duration: 2000
-        });
-        
-        const user = localStorage.getItem('user');
-        if (user !== res.Username) {
-          localStorage.setItem('user', res.Username);
-          setTimeout(function(){
-            window.location.reload();
-         }, 2000);
-        }
+  updateUserData(): void {
+    this.fetchUserData.updateUserInfo(this.updatedUser).subscribe((res: any) => {
+      this.dialogRef.close(); //close the modal on success
+      this.snackBar.open('User updated successfully!', 'OK', {
+        duration: 2000
       });
-    }
+      
+      const user = localStorage.getItem('user');
+      if (user !== res.Username) {
+        localStorage.setItem('user', res.Username);
+        setTimeout(function(){
+          window.location.reload();
+        }, 2000);
+      }
+    });
+  }
 }
 

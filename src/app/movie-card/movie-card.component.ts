@@ -30,6 +30,12 @@ export class MovieCardComponent implements OnInit{
     this.getfavorites();
   }
 
+  /**
+   * Fetch all movies via API service
+   * @function getMovies
+   * @returns array holding movies objects
+   */
+
   getMovies(): void {
     this.fetchMovies.getAllMovies().subscribe((res: any) => {
       this.movies = res;
@@ -37,6 +43,12 @@ export class MovieCardComponent implements OnInit{
       return this.movies;
     });
   }
+
+  /**
+   * Fetch user's favorite movies via API service
+   * @function getfavorites
+   * @returns array holding IDs of favorite movies
+   */
 
   getfavorites() : void {
     this.fetchMovies.getUserInfo().subscribe((res: any) => {
@@ -46,9 +58,22 @@ export class MovieCardComponent implements OnInit{
     });
   }
 
+  /**
+   * Checks if a movie is included in a user's favorite movies
+   * @function isFavorite
+   * @param {string} id
+   * @returns boolean
+   */
+
   isFavorite(id: string) : boolean {
     return this.favorites.includes(id);
   }
+
+  /**
+   * Add movie to user's favorite list via API service
+   * @function addToFavorites
+   * @param {any} id
+   */
 
   addToFavorites(id: any): void {
     console.log(id);
@@ -61,6 +86,12 @@ export class MovieCardComponent implements OnInit{
     });
   }
 
+  /**
+   * Remove movie from user's favorite list via API service
+   * @function removeFromFavorites
+   * @param {any} id
+   */
+
   removeFromFavorites(id: any): void {
     console.log(id);
     this.fetchMovies.removeFavorite(id).subscribe((res: any) => {
@@ -71,6 +102,13 @@ export class MovieCardComponent implements OnInit{
       this.ngOnInit();
     });
   }
+
+  /**
+   * Opens dialog to show director information from director-page
+   * @function openDirectorDialog
+   * @param {string} name
+   * @param {string} bio
+   */
 
   openDirectorDialog(name: string, bio: string): void {
     this.dialog.open(DirectorPageComponent, {
@@ -84,6 +122,13 @@ export class MovieCardComponent implements OnInit{
     });
   }
 
+  /**
+   * Opens dialog to show genre information from genre-page
+   * @function openDirectorDialog
+   * @param {string} name
+   * @param {string} description
+   */
+
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenrePageComponent, {
       data: 
@@ -95,6 +140,13 @@ export class MovieCardComponent implements OnInit{
       height: '400px',
     });
   }
+
+  /**
+   * Opens dialog to show movie synopsis from synopsis-page
+   * @function openSynopsisDialog
+   * @param {string} title
+   * @param {string} description
+   */
 
   openSynopsisDialog(title: string, description: string): void {
     this.dialog.open(SynopsisPageComponent, {
